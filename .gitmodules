@@ -1,6 +1,6 @@
 [submodule "riscv-isa-sim"]
 	path = riscv-isa-sim
-	url = https://github.com/ucb-bar/riscv-isa-sim.git
+	url = git@github.com:ucb-bar/esp-isa-sim.git
 [submodule "riscv-fesvr"]
 	path = riscv-fesvr
 	url = https://github.com/ucb-bar/riscv-fesvr.git
@@ -9,10 +9,10 @@
 	url = https://github.com/ucb-bar/riscv-pk.git
 [submodule "riscv-opcodes"]
 	path = riscv-opcodes
-	url = https://github.com/ucb-bar/riscv-opcodes.git
+	url = git@github.com:ucb-bar/esp-opcodes.git
 [submodule "riscv-tests"]
 	path = riscv-tests
-	url = https://github.com/ucb-bar/riscv-tests.git
+	url = git@github.com:ucb-bar/esp-tests.git
 [submodule "riscv-llvm"]
 	path = riscv-llvm
 	url = https://github.com/ucb-bar/riscv-llvm.git
@@ -21,4 +21,4 @@
 	url = https://github.com/ucb-bar/riscv-qemu.git
 [submodule "riscv-gnu-toolchain"]
 	path = riscv-gnu-toolchain
-	url = https://github.com/ucb-bar/riscv-gnu-toolchain.git
+	url = git@github.com:ucb-bar/esp-gnu-toolchain.git
