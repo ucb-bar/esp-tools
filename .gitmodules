@@ -16,9 +16,6 @@
 [submodule "riscv-llvm"]
 	path = riscv-llvm
 	url = https://github.com/ucb-bar/riscv-llvm.git
-[submodule "riscv-qemu"]
-	path = riscv-qemu
-	url = https://github.com/ucb-bar/riscv-qemu.git
 [submodule "riscv-gnu-toolchain"]
 	path = riscv-gnu-toolchain
 	url = git@github.com:ucb-bar/esp-gnu-toolchain.git
