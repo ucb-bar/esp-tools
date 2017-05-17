@@ -22,7 +22,7 @@ This repo provides guides and references:
 
 Ubuntu packages needed:
 
-	$ sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc
+	$ sudo apt-get install autoconf automake autotools-dev curl device-tree-compiler libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev
 
 
 _Note:_ This requires a compiler with C++11 support (e.g. GCC >= 4.8).
@@ -30,7 +30,7 @@ To use a compiler different than the default, use:
 
 	$ CC=gcc-5 CXX=g++-5 ./build.sh
 
-_Note for OS X:_ We recommend using [Homebrew](http://brew.sh) to install the dependencies (`gawk gnu-sed gmp mpfr libmpc isl`) or even to install the tools [directly](https://github.com/riscv/homebrew-riscv). This repo will build with Apple's command-line developer tools (clang) in addition to gcc.
+_Note for OS X:_ We recommend using [Homebrew](http://brew.sh) to install the dependencies (`dtc gawk gnu-sed gmp mpfr libmpc isl wget`) or even to install the tools [directly](https://github.com/riscv/homebrew-riscv). This repo will build with Apple's command-line developer tools (clang) in addition to gcc.
 
 Building `riscv-tools` requires GCC >= 4.8 for C++11 support.
 
@@ -195,7 +195,7 @@ flex, bison, autotools, libmpc, libmpfr, and libgmp. Ubuntu distribution
 installations will require this command to be run. If you have not installed
 these things yet, then run this:
 
-	O$ sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc
+	O$ sudo apt-get install autoconf automake autotools-dev curl device-tree-compiler libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc
 
 Before we start installation, we need to set the
 `$RISCV` environment variable. The variable is used throughout the
@@ -210,12 +210,7 @@ environment variable now:
 
 	$ export PATH=$PATH:$RISCV/bin
 
-One more thing: If your machine doesn't have the capacity to
-handle 16 make jobs (or conversely, it can handle more), edit
-`build.common` to change the number specified by
-`JOBS`.
-
-	O$ sed -i 's/JOBS=16/JOBS=[number]/' build.common
+The number of parallel compiler runs is set by `$MAKEFLAGS`.
 
 With everything else set up, run the build script.
 
@@ -407,7 +402,7 @@ flex, bison, autotools, libmpc, libmpfr, and libgmp. Ubuntu distribution
 installations will require this command to be run. If you have not installed
 these things yet, then run this:
 
-	O$ sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool
+	O$ sudo apt-get install autoconf automake autotools-dev curl device-tree-compiler libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf
 
 Before we start installation, we need to set the
 `$RISCV` environment variable. The variable is used throughout the
@@ -421,13 +416,6 @@ directory specified by `$RISCV`, add it to the `$PATH`
 environment variable now:
 
 	$ export PATH=$PATH:$RISCV/bin
-
-One more thing: If your machine doesn't have the capacity to
-handle 16 make jobs (or conversely, it can handle more), edit
-`build.common` to change the number specified by
-`JOBS`.
-
-	O$ sed -i 's/JOBS=16/JOBS=[number]/' build.common
 
 Since we only need to build a few tools, we will use a
 modified build script, listed in its entirety below. Remember that we'll build
