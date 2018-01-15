@@ -22,8 +22,7 @@ This repo provides guides and references:
 
 Ubuntu packages needed:
 
-	$ sudo apt-get install autoconf automake autotools-dev curl device-tree-compiler libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev
-
+	$ sudo apt-get install autoconf automake autotools-dev curl device-tree-compiler libmpc-dev libmpfr-dev libgmp-dev libusb-1.0-0-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev device-tree-compiler pkg-config
 
 Fedora packages needed:
 
@@ -197,7 +196,7 @@ flex, bison, autotools, libmpc, libmpfr, and libgmp. Ubuntu distribution
 installations will require this command to be run. If you have not installed
 these things yet, then run this:
 
-	O$ sudo apt-get install autoconf automake autotools-dev curl device-tree-compiler libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc
+	O$ sudo apt-get install autoconf automake autotools-dev curl device-tree-compiler libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev
 
 Before we start installation, we need to set the
 `$RISCV` environment variable. The variable is used throughout the
