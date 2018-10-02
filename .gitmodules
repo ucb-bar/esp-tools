@@ -13,9 +13,6 @@
 [submodule "riscv-tests"]
 	path = riscv-tests
 	url = git@github.com:ucb-bar/esp-tests.git
-[submodule "riscv-llvm"]
-	path = riscv-llvm
-	url = https://github.com/ucb-bar/riscv-llvm.git
 [submodule "riscv-gnu-toolchain"]
 	path = riscv-gnu-toolchain
 	url = git@github.com:ucb-bar/esp-gnu-toolchain.git
